@@ -1,6 +1,14 @@
-type TimeSlot = {
-  start_time: string;
-  end_time: string;
+type TimeSlotModel = {
+  start: string;
+  end: string;
+  year: number;
+  month: number;
+  day: number;
+  disabled: boolean;
+  selected: boolean;
+  startTimestamp: number;
+  endTimestamp: number;
+  date: Date
 };
 
-export default TimeSlot;
+export default TimeSlotModel;

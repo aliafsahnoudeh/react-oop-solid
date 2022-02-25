@@ -1,4 +1,4 @@
-import Company from '../../types/CompanyModel';
+import RawCompanyModel from '../types/RawCompanyModel';
 import IApiService from './IApiService';
 import ICompanyService from './ICompanyService';
 
@@ -9,7 +9,7 @@ class CompanyService implements ICompanyService {
     this.apiService = apiService;
   }
 
-  public async fetch(): Promise<Array<Company>> {
+  public async fetch(): Promise<Array<RawCompanyModel>> {
     const {
       body,
     } = await this.apiService.request(

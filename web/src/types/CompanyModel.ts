@@ -1,10 +1,12 @@
+import GroupModel from './GroupModel';
 import TimeSlotModel from './TimeSlotModel';
 
-type Company = {
+type CompanyModel = {
   id: number;
-  name: String;
-  type: String;
-  time_slots: Array<TimeSlotModel>;
+  name: string;
+  type: string;
+  groups: GroupModel[];
+  selectedTimeSlot: TimeSlotModel | undefined;
 };
 
-export default Company;
+export default CompanyModel;

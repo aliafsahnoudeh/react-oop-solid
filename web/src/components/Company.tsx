@@ -3,19 +3,30 @@ import React from 'react';
 import CompanyModel from '../types/CompanyModel';
 
 import CompanyLabel from './CompanyLabel';
-import TimeSlotList from './TimeSlotList';
+import GroupList from './GroupList';
+import TimeSlot from './TimeSlot';
 
 interface Iprops {
-  company: CompanyModel
+  company: CompanyModel;
+  index: number;
 }
 
-function Main({ company }: Iprops) {
+function Company({ company, index }: Iprops) {
   return (
     <div className="company">
       <CompanyLabel name={company.name} key={company.id} />
-      <TimeSlotList timeSlots={company.time_slots} />
+      <TimeSlot
+        timeSlot={company.selectedTimeSlot}
+        disabled={false}
+        selected={false}
+        indices={undefined}
+      />
+      <GroupList
+        groups={company.groups}
+        companyIndex={index}
+      />
     </div>
   );
 }
 
-export default Main;
+export default Company;
