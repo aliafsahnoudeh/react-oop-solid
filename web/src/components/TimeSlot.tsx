@@ -12,17 +12,20 @@ interface Iprops {
   indices: IndicesModel | undefined;
   disabled: boolean;
   selected: boolean;
+  label: string | undefined;
 }
 
 function TimeSlot({
-  timeSlot, indices, disabled, selected,
+  timeSlot, indices, disabled, selected, label,
 }:Iprops) {
   const [handleTimeSlotClick] = useBooking();
 
   return (
-    <button type="button" className={`${styles['time-slot']} ${selected ? styles['time-slot-selected'] : ''}`} onClick={() => handleTimeSlotClick(indices)} disabled={disabled}>
-      {timeSlot !== undefined ? (
+    <button type="button" className={`${styles['time-slot']} ${selected ? styles['time-slot-selected'] : ''} ${timeSlot === undefined ? styles['time-slot-empty'] : ''}`} onClick={() => handleTimeSlotClick(indices)} disabled={disabled}>
+      {timeSlot ? (
         <div>
+          {label !== undefined ? <span>{label}</span> : null}
+          {' at '}
           <span className="time-slot-start">{timeSlot.start}</span>
           {' - '}
           <span className="time-slot-end">{timeSlot.end}</span>

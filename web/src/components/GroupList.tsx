@@ -10,7 +10,7 @@ interface Iprops {
 
 function GroupList({ groups, companyIndex }:Iprops) {
   return (
-    <div className="time-slot-list">
+    <div>
       {groups.map((group: GroupModel, index: number) => (
         <Group
           group={group}

@@ -6,7 +6,7 @@ interface Iprops {
 
 function CompanyLabel({ name }: Iprops) {
   return (
-    <div className="company-label">
+    <div className="title company-label">
       <span className="company-label-text">
         {name}
       </span>

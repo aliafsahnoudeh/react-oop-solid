@@ -80,10 +80,13 @@ class BookingService implements IBookingService {
       }
     }
 
+    const selected = JSON.parse(JSON.stringify(this.companies[indices.company].groups[indices.group].timeSlots[indices.timeSlot]));
+    selected.label = this.companies[indices.company].groups[indices.group].dayLabel;
+
     return {
       updates,
       selected: {
-        selected: this.companies[indices.company].groups[indices.group].timeSlots[indices.timeSlot],
+        selected,
         companyIndex: indices.company,
       },
     };

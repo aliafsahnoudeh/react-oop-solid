@@ -4,7 +4,7 @@ import TimeSlotModel from '../types/TimeSlotModel';
 import TimeSlot from './TimeSlot';
 import GroupModel from '../types/GroupModel';
 
-import styles from './Group.module.scss';
+import CardLayout from './CardLayout';
 
 interface Iprops {
   group: GroupModel;
@@ -16,8 +16,8 @@ interface Iprops {
 
 function Group({ group, indices }:Iprops) {
   return (
-    <div className={styles['time-slot-list']}>
-      <div>{group.dayLabel}</div>
+    <CardLayout>
+      <div className="title">{group.dayLabel}</div>
       {group.timeSlots.map((ts: TimeSlotModel, index: number) => (
         <TimeSlot
           timeSlot={ts}
@@ -29,9 +29,10 @@ function Group({ group, indices }:Iprops) {
           }}
           disabled={ts.disabled}
           selected={ts.selected}
+          label={undefined}
         />
       ))}
-    </div>
+    </CardLayout>
   );
 }
 

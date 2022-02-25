@@ -8,7 +8,8 @@ type TimeSlotModel = {
   selected: boolean;
   startTimestamp: number;
   endTimestamp: number;
-  date: Date
+  date: Date;
+  label: string | undefined;
 };
 
 export default TimeSlotModel;
