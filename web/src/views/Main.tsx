@@ -15,19 +15,21 @@ function Main() {
   const { companies, setCompanies } = useStore();
   const [loading, setLoading] = useState(false);
 
-  const fetchCompanies = async () => {
+  const fetchCompanies = async (isMounted: boolean) => {
     try {
       setLoading(true);
       setCompanies(processRawDataService.process(await companyService.fetch()));
     } catch (error) {
       setCompanies([]);
     } finally {
-      setLoading(false);
+      if (isMounted) { setLoading(false); }
     }
   };
 
   useEffect(() => {
-    fetchCompanies();
+    let isMounted = true;
+    fetchCompanies(isMounted);
+    return () => { isMounted = false; };
   }, []);
 
   return (
