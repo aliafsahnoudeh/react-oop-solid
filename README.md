@@ -34,6 +34,8 @@ npm run test
 
 3) Model/State layer: For keeping models/types and global state of the application.
 
+- Also tried to make a balance between Object Oriented Programming and semi-functional programming paradigms.
+
 - Presentation layer has access to the business layer via an abstraction of interfaces. Except for the custom hooks, it was possible to create an abstraction for them as well but I thought it would be over engineering!
 
 - I've implemented dependency injection with IOC container and constructor injection and used react context to inject them to the presentation layer. Both components-logic and services have their own ioc container and context. Maybe even using the context is not nesseccary since IOC container can do the injecting as well, but just wanted to show that I understand the concept :)
