@@ -23,6 +23,7 @@ class ProcessRawDataService {
         id: rawCompany.id,
         name: rawCompany.name,
         type: rawCompany.type,
+        selectedTimeSlot: undefined,
         groups: [] as GroupModel[],
       } as CompanyModel;
 
@@ -61,6 +62,7 @@ class ProcessRawDataService {
         selected: false,
         startTimestamp: startDate.getTime(),
         endTimestamp: endDate.getTime(),
+        label: undefined,
         year: startDate.getFullYear(),
         month: startDate.getMonth(),
         day: startDate.getDay(),

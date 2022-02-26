@@ -2,23 +2,30 @@
 
 .time-slot {
   margin-bottom: 1%;
-  width: 100%;
-  min-height: 25px;
+  cursor: pointer;
+  width: 80%;
+  min-height: 40px;
   border-radius: 5px;
   background: $available-color;
+  &-selected {
+    background: $selected-color;
+    color: $white;
+  }
+  &-empty {
+    background: $empty-color;
+    cursor: auto;
+  }
+  &[disabled] {
+    cursor: auto;
+    opacity: 0.5;
+  }
 }
 .time-slot:hover {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: rgba(0, 67, 143, 0.5) 0px 50px 100px -20px,
+    rgba(0, 67, 143, 0.3) 0px 30px 60px -30px,
+    rgba(0, 67, 143, 0.35) 0px -2px 6px 0px inset;
 }
 
 .time-slot[disabled]:hover {
   box-shadow: none;
-}
-
-.time-slot-empty {
-  background: $empty-color;
-}
-
-.time-slot-selected {
-  background: $selected-color;
 }

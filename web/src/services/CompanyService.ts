@@ -1,6 +1,7 @@
-import RawCompanyModel from '../types/RawCompanyModel';
 import IApiService from './IApiService';
 import ICompanyService from './ICompanyService';
+
+import RawCompanyModel from '../types/RawCompanyModel';
 
 class CompanyService implements ICompanyService {
   private readonly apiService: IApiService;

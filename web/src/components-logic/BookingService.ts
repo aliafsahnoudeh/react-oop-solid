@@ -31,7 +31,8 @@ class BookingService implements IBookingService {
       const timeSlot: TimeSlotModel = this.companies[indices.company].groups[indices.group].timeSlots[indices.timeSlot];
       for (let i = 0; i < this.companies.length; i += 1) {
         if (i !== ignoreIndex) {
-          if (this.companies[i].selectedTimeSlot !== undefined && (indices.company === i || this.hasOverlap(this.companies[i].selectedTimeSlot, timeSlot))) {
+          if (this.companies[i].selectedTimeSlot !== undefined && (indices.company === i
+            || this.hasOverlap(this.companies[i].selectedTimeSlot, timeSlot))) {
             return true;
           }
         }

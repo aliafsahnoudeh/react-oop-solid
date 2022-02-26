@@ -1,12 +1,11 @@
 import React from 'react';
 
-import CardLayout from './CardLayout';
-
 import CompanyModel from '../types/CompanyModel';
 
 import CompanyLabel from './CompanyLabel';
 import GroupList from './GroupList';
 import TimeSlot from './TimeSlot';
+import CardLayout from './CardLayout';
 
 interface Iprops {
   company: CompanyModel;

@@ -1,7 +1,8 @@
 import React from 'react';
 
-import Group from './Group';
 import GroupModel from '../types/GroupModel';
+
+import Group from './Group';
 
 interface Iprops {
   groups: GroupModel[];

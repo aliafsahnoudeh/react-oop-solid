@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface Iprops {
-  name: String
+  name: string
 }
 
 function CompanyLabel({ name }: Iprops) {

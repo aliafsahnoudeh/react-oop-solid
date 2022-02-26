@@ -22,6 +22,6 @@ const ServiceContext = React.createContext({
   companyService: iocContainer.get('CompanyService'),
 });
 
-export const container = iocContainer
+export const container = iocContainer;
 
 export default ServiceContext;

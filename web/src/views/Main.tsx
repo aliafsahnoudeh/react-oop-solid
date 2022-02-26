@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import ServiceContext from '../services';
-import LogicContext from '../components-logic';
-import useStore from '../store';
+import React from 'react';
+
+import useCompanies from '../components-logic/useCompnaies';
 import CompanyModel from '../types/CompanyModel';
 
 import Company from '../components/Company';
@@ -10,27 +9,7 @@ import Layout from '../components/Layout';
 import styles from './Main.module.scss';
 
 function Main() {
-  const { companyService } = React.useContext(ServiceContext);
-  const { processRawDataService } = React.useContext(LogicContext);
-  const { companies, setCompanies } = useStore();
-  const [loading, setLoading] = useState(false);
-
-  const fetchCompanies = async (isMounted: boolean) => {
-    try {
-      setLoading(true);
-      setCompanies(processRawDataService.process(await companyService.fetch()));
-    } catch (error) {
-      setCompanies([]);
-    } finally {
-      if (isMounted) { setLoading(false); }
-    }
-  };
-
-  useEffect(() => {
-    let isMounted = true;
-    fetchCompanies(isMounted);
-    return () => { isMounted = false; };
-  }, []);
+  const { loading, companies } = useCompanies();
 
   return (
     <Layout>
