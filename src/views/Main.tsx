@@ -1,10 +1,10 @@
 import React from 'react';
 
-import useCompanies from '../components-logic/useCompnaies';
+import useCompanies from '../logic-components/useCompnaies';
 import CompanyModel from '../types/CompanyModel';
 
-import Company from '../components/Company';
-import Layout from '../components/Layout';
+import Company from '../ui-components/Company';
+import Layout from '../ui-components/Layout';
 
 import styles from './Main.module.scss';
 
