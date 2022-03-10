@@ -1,9 +1,5 @@
 ## Running the server
-Please run:
-```
-npm i
-```
-And then
+Run:
 ```
 npm start
 ```

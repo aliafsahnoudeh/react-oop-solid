@@ -1,3 +1,4 @@
+// It just does the calculation and doesn't keep any state. We just pass the current state to it and it will use it for calculations and then just returns the result
 import IBookingService from './IBookingService';
 
 import CompanyModel from '../types/CompanyModel';

@@ -10,6 +10,7 @@ import IndicesModel from '../types/IndicesModel';
 function useBooking() {
   const { companies, updateTimeSlots, updateSelected } = useStore();
   const { BookingService } = React.useContext(LogicContext);
+  // TODO put it inside handler
   const bookingService: IBookingService = new BookingService(companies);
 
   const handleTimeSlotClick = (indices: IndicesModel | undefined): void => {
