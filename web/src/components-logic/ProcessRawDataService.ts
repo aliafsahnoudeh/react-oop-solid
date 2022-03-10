@@ -27,6 +27,7 @@ class ProcessRawDataService {
         groups: [] as GroupModel[],
       } as CompanyModel;
 
+      // TODO merge these two iterations. converting and adding to a group can be in the same place
       const newTimeSlots = this.convertTimeSlot(rawCompany.time_slots);
       if (newTimeSlots.length > 0) {
         let index = -1;
@@ -70,6 +71,7 @@ class ProcessRawDataService {
       } as TimeSlotModel;
     });
 
+    // TODO remove if it's already sorted
     newList.sort((a, b) => {
       if (a.startTimestamp >= b.startTimestamp) return 1;
       return -1;
