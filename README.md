@@ -45,3 +45,27 @@ npm run test
 - The app definitely should have a lot more unit tests. Even we can have a couple of E2E tests as well.
 
 - I tried to use a combination of global and scoped styling with SCSS. It could be implemented much nicer with more nesting and the usage of mixins. Also there are some components just for making a consitent and reuseable styling for components, like Layout.tsx or CardLayout.tsx.
+
+## Running the web client
+Please run:
+```
+npm i
+```
+And then
+```
+npm start
+```
+Application will start on port 3000
+And for running tests:
+```
+npm run test
+```
+
+## Running the server
+Go to /server directory
+
+And then
+```
+npm start
+```
+A server will start listening on port 4000
