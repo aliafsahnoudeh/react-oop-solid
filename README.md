@@ -44,10 +44,8 @@ npm run test
 ```
 
 ## Running the server
-Please go to /server directory
-
-And then
+Please run
 ```
-npm start
+npm server:start
 ```
 A server will start listening on port 4000
