@@ -2,8 +2,8 @@
   "companies" : [
     {
       "id": 1,
-      "name": "Company 1",
-      "type": "company",
+      "name": "Pink Floyd",
+      "type": "band",
       "time_slots": [
         {
           "start_time": "2018-07-09T08:00:00.000+02:00",
@@ -161,8 +161,8 @@
     },
     {
       "id": 2,
-      "name": "Company 2",
-      "type": "company",
+      "name": "Led Zeppelin",
+      "type": "band",
       "time_slots": [
         {
           "start_time": "2018-07-09T08:00:00.000+02:00",
@@ -320,8 +320,8 @@
     },
     {
       "id": 3,
-      "name": "Company 3",
-      "type": "company",
+      "name": "Jimi Hendrix",
+      "type": "band",
       "time_slots": [
         {
           "start_time": "2018-07-09T08:00:00.000+02:00",

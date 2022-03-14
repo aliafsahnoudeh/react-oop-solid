@@ -1,6 +1,7 @@
 ## What is this project
-It's just a sample application to show advanced object oriend programming and SOLID principles beside the React.js best practices.
-Our we application just fetches a list of companies and each company has a list of time slots to choose. We can select one time slot per company. Also this selected timeslot will fill our time on that day, so we can't select any other time slot from any other company either!
+
+It's just a sample application to show advanced object oriented programming and SOLID principles beside the React.js best practices.
+Our web application just fetches a list of music bands and each band has a list of time slots to choose. We have a concert hall which can host only one band at a time, so by selecting a time slot for a specific band, other band's time slots which overlap will be disabled. Also each band can perform once so by selecting a time slot of a specific band, all of the other time slots of that band are going to be disabled.
 
 ## A summary of what I did and why, in case you were interested:
 
@@ -8,11 +9,11 @@ Our we application just fetches a list of companies and each company has a list 
 
 - Basically I tried to design the architecture into 3 main pieces. Somehow similar to MVP or MVVM.
 
-1) UI/Presentation layer: (pages and components) are placed in /views and /components. Also I tried to respect seperated presentation principle and just keep the ui logic there.
+1. UI/Presentation layer: (pages and components) are placed in /views and /components. Also I tried to respect seperated presentation principle and just keep the ui logic there.
 
-2) Logic/Business layer: Logical components are in /services and /logic-components. With this approach I tried to separate service layer including API calls or maybe in future working with vendors and third-parties from application logic. These two groups have access to each other but don't have a tight coupling to the UI layer.
+2. Logic/Business layer: Logical components are in /services and /logic-components. With this approach I tried to separate service layer including API calls or maybe in future working with vendors and third-parties from application logic. These two groups have access to each other but don't have a tight coupling to the UI layer.
 
-3) Model/State layer: For keeping models/types and global state of the application.
+3. Model/State layer: For keeping models/types and global state of the application.
 
 - Also tried to make a balance between Object Oriented Programming and semi-functional programming paradigms.
 
@@ -29,23 +30,32 @@ Our we application just fetches a list of companies and each company has a list 
 - I tried to use a combination of global and scoped styling with SCSS. It could be implemented much nicer with more nesting and the usage of mixins. Also there are some components just for making a consitent and reuseable styling for components, like Layout.tsx or CardLayout.tsx.
 
 ## Running the web client
+
 Please run:
+
 ```
 npm i
 ```
+
 And then
+
 ```
 npm start
 ```
+
 Application will start on port 3000
 And for running tests:
+
 ```
 npm run test
 ```
 
 ## Running the server
+
 Please run
+
 ```
 npm server:start
 ```
+
 A server will start listening on port 4000
