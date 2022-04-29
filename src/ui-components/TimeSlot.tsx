@@ -30,7 +30,7 @@ function TimeSlot({
       {timeSlot ? (
         <div>
           {label !== undefined ? <span>{label}</span> : null}
-          {' at '}
+          {label !== undefined ? ' at ' : null}
           <span className="time-slot-start">{timeSlot.start}</span>
           {' - '}
           <span className="time-slot-end">{timeSlot.end}</span>

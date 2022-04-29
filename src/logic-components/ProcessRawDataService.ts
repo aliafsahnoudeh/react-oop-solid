@@ -3,8 +3,9 @@ import GroupModel from '../types/GroupModel';
 import RawCompanyModel from '../types/RawCompanyModel';
 import TimeSlotModel from '../types/TimeSlotModel';
 import RawTimeSlotModel from '../types/RawTimeSlotModel';
+import IProcessRawDataService from './IProcessRawDataService';
 
-class ProcessRawDataService {
+class ProcessRawDataService implements IProcessRawDataService {
   private readonly months: string[];
 
   private readonly days: string[];
