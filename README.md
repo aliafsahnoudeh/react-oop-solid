@@ -1,6 +1,9 @@
 ## What is the purpose of this project?
 
-It's just a sample application to show how to leverage advanced object oriented programming, SOLID, compositions and component based design along React.js best practices to gain cleaner code structure, more maintainable and reusable code base also better code coherence.
+It's just a sample application to show how to leverage advanced [object oriented programming](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming), SOLID, compositions and component based design along React.js best practices to gain cleaner code structure, more maintainable and reusable code base also better code coherence.
+<br/>
+<br/>
+The exact same project written in Vue.js [here](https://github.com/aliafsahnoudeh/vue-oop-solid).
 
 ## What does this application do?
 
