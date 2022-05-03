@@ -1,24 +1,24 @@
 ## What is the purpose of this project?
 
-It's just a sample application to show how to leverage advanced object oriented programming ,SOLID principles, compositions, component based design along React.js best practices to gain better and more clean code structure, more maintainable and reusable code base with better code coherence.
+It's just a sample application to show how to leverage advanced object oriented programming, SOLID, compositions and component based design along React.js best practices to gain cleaner code structure, more maintainable and reusable code base also better code coherence.
 
 ## What does this application do?
 
-Our web application just fetches a list of music bands and each band has a list of time slots to choose. We have a concert hall which can host only one band at a time, so by selecting a time slot for a specific band, other band's time slots which overlap will be disabled. Also each band can perform once so by selecting a time slot of a specific band, all of the other time slots of that band are going to be disabled.
+Our web application fetches a list of music bands. Each band has a list of time slots to choose. We have a concert hall which can host only one band at a time, so by selecting a time slot for a specific band, other band's time slots which overlap that time will be disabled. Also each band can perform once, so by selecting a time slot of a specific band, all of the other time slots of that band are going to be disabled.
 
 ## A summary of what I did and why, in case you were interested:
 
-For diving deeper into this topic and get more details please have look at this:
+For diving deeper into this topic and get more details please have look at this.
 
 But as a summary I can mention these:
 
 - I imagined this application is bigger than it is and tried to implement some concepts suited for that scale.
 
-- Basically I tried to design an architecture into 3 main pieces. Somehow similar to MVP or MVVM.
+- Basically I tried to design an architecture into 3 main layers. Somehow similar to MVP or MVVM.
 
-1. UI/Presentation layer: (pages and components) are placed in /views and /components. Also I tried to respect the separated presentation principle and just keep the UI logic there.
+1. UI/Presentation layer: (pages and components) are placed in /views and /components. Also I tried to respect the [separated presentation principle](https://martinfowler.com/eaaDev/SeparatedPresentation.html) and just keep the UI logic there.
 
-2. Logic/Business layer: Logical components are in /services and /logical-components. With this approach I tried to separate service layers including API calls or maybe in future working with vendors and third-parties from application logic. These two groups have access to each other loosely also they don't have a tight coupling to the UI layer.
+2. Logic/Business layer: Logical components are in /services and /logical-components. With this approach I tried to separate service logic including API calls or maybe in future working with vendors and third-parties from application logic. These two groups have access to each other loosely and via interfaces. Also they don't have a tight coupling to the UI layer.
 
 3. Model/State layer: For keeping models/types and global state of the application.
 
@@ -28,7 +28,7 @@ But as a summary I can mention these:
 
 - I've implemented dependency injection with IOC container and constructor injection and used react context to inject them to the presentation layer. Both logical-components and services have their own IOC container and context. Maybe even using the context is not necessary since the IOC container can do the injecting as well! Probably it's a good idea when we are separating our application in isolated modules. But still I just kept them to show the usage!
 
-- I could keep the state in the parent component but just used a state management piece to show the usage. I've chosen zustand for its simplicity and combined it with immer for smoother reactivity of nested objects. It was possible to separate companies and time-slots or even groups inside the state but again I guessed the data is not going to be huge so tried to keep it simple.
+- I could keep the state in the parent component but just used a state management piece to show the usage. I've chosen [zustand](https://github.com/pmndrs/zustand) for its simplicity and combined it with [immer.js](https://github.com/immerjs/immer) for smoother reactivity of nested objects. It was possible to separate companies and time-slots or even groups inside the state but again I guessed the data is not going to be huge so I tried to keep it simple.
 
 ## TODO
 
