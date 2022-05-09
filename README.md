@@ -4,6 +4,9 @@ It's just a sample application to show how to leverage advanced [object oriented
 <br/>
 <br/>
 The exact same project written in Vue.js [here](https://github.com/aliafsahnoudeh/vue-oop-solid).
+<br/>
+<br/>
+If you like to dive deeper into why I've created this repo please have a look at [this article](https://medium.com/@aliafsah1988/how-to-properly-use-typescript-oop-and-solid-in-modern-web-applications-e4ef88761154).
 
 ## What does this application do?
 
