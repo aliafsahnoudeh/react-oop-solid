@@ -2,7 +2,7 @@ import React from 'react';
 
 import IndicesModel from '../types/IndicesModel';
 import TimeSlotModel from '../types/TimeSlotModel';
-import useBooking from '../logic-components/useBooking';
+import useBooking from '../logical-components/useBooking';
 
 import styles from './TimeSlot.module.scss';
 

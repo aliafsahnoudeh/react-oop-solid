@@ -2,6 +2,7 @@ import React from 'react';
 
 import IocContainer from '../IocContainer';
 import ApiService from './ApiService';
+import BandServicePathsInterface from './BandServicePaths.interface';
 import CompanyService from './CompanyService';
 
 const iocContainer = new IocContainer();
@@ -12,8 +13,18 @@ iocContainer.service(
 );
 
 iocContainer.service(
+  'BandServicePaths',
+  () => ({
+    fetch: {
+      Method: 'GET',
+      Path: '/companies',
+    },
+  } as BandServicePathsInterface),
+);
+
+iocContainer.service(
   'CompanyService',
-  (c:any) => new CompanyService(c.ApiService),
+  (c:any) => new CompanyService(c.ApiService, c.BandServicePaths),
 );
 
 // I'm using context to inject the services, but of course I could use the ioc container instead.

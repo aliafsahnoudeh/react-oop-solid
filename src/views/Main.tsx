@@ -1,6 +1,6 @@
 import React from 'react';
 
-import useCompanies from '../logic-components/useCompnaies';
+import useCompanies from '../logical-components/useCompnaies';
 import CompanyModel from '../types/CompanyModel';
 
 import Company from '../ui-components/Company';
